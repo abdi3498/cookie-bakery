@@ -1,0 +1,156 @@
+/* Cookie Bakery — warm editorial style */
+:root {
+  --cream: #fbefdc; --cream-2: #fff8ec; --brown: #402016; --brown-2: #6e4533;
+  --wine: #831b3d; --wine-dark: #68132e; --peach: #f2d8b9; --muted: #987c69;
+  --white: #fffaf2; --shadow: 0 18px 45px rgba(81, 43, 25, .09);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:"DM Sans",sans-serif;background:var(--cream);color:var(--brown);overflow-x:hidden}
+img{display:block;max-width:100%;width:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+.container{width:min(1120px,calc(100% - 48px));margin-inline:auto}
+.section{padding:105px 0;position:relative}
+.page-glow{position:absolute;pointer-events:none;border-radius:50%;filter:blur(70px);opacity:.34;z-index:-1}
+.page-glow--one{width:340px;height:340px;background:#f7d6b6;top:150px;left:-180px}
+.page-glow--two{width:300px;height:300px;background:#edc9b2;right:-180px;top:850px}
+.header{position:sticky;top:0;z-index:50;background:rgba(251,239,220,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(92,54,34,.07)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.nav__logo{display:inline-flex;align-items:center;gap:8px;font:700 23px "Fredoka",sans-serif;letter-spacing:-.7px}
+.nav__logo i{color:var(--wine);font-size:23px}
+.nav__menu{display:flex;align-items:center;gap:34px}
+.nav__list{display:flex;align-items:center;gap:29px;list-style:none}
+.nav__link{font-size:12px;font-weight:700;color:#765b49;transition:color .2s}
+.nav__link:hover,.nav__link.active-link{color:var(--wine)}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--wine);color:white;border:1px solid var(--wine);padding:13px 20px;border-radius:30px;font-size:12px;font-weight:700;transition:transform .25s,background .25s,box-shadow .25s}
+.button:hover{background:var(--wine-dark);transform:translateY(-3px);box-shadow:0 9px 20px #831b3d25}
+.button--outline{background:transparent;color:var(--wine)}
+.button--outline:hover{color:white}
+.nav__button{padding:11px 17px}
+.nav__actions{display:flex;align-items:center;gap:16px}
+.cart-link{position:relative;font-size:21px;color:var(--wine)}
+.cart-count{position:absolute;top:-8px;right:-10px;display:grid;place-items:center;width:17px;height:17px;border-radius:50%;background:var(--wine);color:white;font-size:9px;font-weight:700}
+.nav__toggle,.nav__close,.mobile-brand,.nav__social{display:none}
+.home{padding:78px 0 32px;min-height:650px}
+.home__grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:75px}
+.eyebrow,.section-kicker{display:inline-flex;align-items:center;gap:7px;color:var(--wine);font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+.eyebrow{padding:8px 12px;background:#f4dfc3;border-radius:30px;letter-spacing:.2px;text-transform:none;color:#79563b}
+.eyebrow i{color:#d08b39}
+.home h1{font:700 clamp(48px,6vw,76px)/.98 "Fredoka",sans-serif;letter-spacing:-2.8px;margin:22px 0 19px;max-width:520px}
+.home h1 span,.about h2 span,.contact h2 span{color:var(--wine)}
+.home__description{max-width:420px;color:#866d5b;font-size:13px;line-height:1.9}
+.home__buttons{display:flex;gap:12px;margin-top:27px}
+.home__note{display:flex;align-items:center;gap:13px;margin-top:40px}
+.avatar-stack{display:flex;padding-left:5px}
+.avatar-stack span{width:32px;height:32px;display:grid;place-items:center;border-radius:50%;background:#f0d7b8;border:2px solid var(--cream);margin-left:-5px;font-size:14px}
+.home__note p{font-size:10px;line-height:1.5;color:var(--muted)}
+.home__note strong{color:var(--brown);font-size:11px}
+.home__visual{position:relative;padding:10px 22px 20px 0}
+.hero-photo{height:440px;border-radius:48% 48% 25px 25px;overflow:hidden;box-shadow:var(--shadow);transform:rotate(2deg);background:#e7c9a5}
+.hero-photo img{height:100%;transition:transform .8s}
+.hero-photo:hover img{transform:scale(1.05)}
+.hero-sticker{position:absolute;z-index:2;top:18px;left:-32px;width:105px;height:105px;border-radius:50%;background:var(--wine);color:white;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;font:600 13px "Fredoka",sans-serif;transform:rotate(-12deg);box-shadow:0 12px 25px #831b3d35}
+.hero-sticker i{font-size:18px}
+.floating-note{position:absolute;right:-8px;bottom:42px;background:var(--cream-2);padding:13px 17px;border-radius:14px;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px}
+.floating-note__icon{font-size:25px;color:var(--wine)}
+.floating-note strong,.floating-note small{display:block}
+.floating-note strong{font:600 13px "Fredoka",sans-serif}
+.floating-note small{font-size:9px;color:var(--muted);margin-top:3px}
+.home__bottom{display:flex;justify-content:space-between;padding-top:35px;color:#a58a75;font-size:9px;font-weight:800;letter-spacing:1.8px}
+.home__bottom i{margin-left:7px;color:var(--wine)}
+.section-heading{text-align:center;margin-bottom:43px}
+.section-heading h2,.about h2,.contact h2{font:700 clamp(36px,4vw,49px)/1.05 "Fredoka",sans-serif;letter-spacing:-1.3px;margin:10px 0}
+.section-heading h2 span{color:var(--wine)}
+.section-heading p{font-size:12px;color:var(--muted);line-height:1.7}
+.featured{background:#f8ead5}
+.featured__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:950px;margin:auto}
+.product-card{background:var(--cream-2);border:1px solid #f1e1cc;border-radius:17px;padding:12px;box-shadow:0 12px 30px rgba(77,43,25,.06);transition:transform .3s,box-shadow .3s}
+.product-card:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
+.product-card__image{height:190px;border-radius:12px;position:relative;overflow:hidden;background:#e8d0b2}
+.product-card__image img{height:100%;transition:transform .5s}
+.product-card:hover img{transform:scale(1.06)}
+.product-tag{position:absolute;z-index:1;top:11px;left:11px;padding:5px 9px;border-radius:20px;background:var(--wine);color:white;font-size:8px;font-weight:700}
+.product-card__body{padding:15px 5px 5px}
+.product-card h3,.menu-card h3{font:600 17px "Fredoka",sans-serif}
+.product-card p{font-size:10px;line-height:1.7;color:var(--muted);min-height:35px;margin:7px 0 13px}
+.product-card__bottom{display:flex;justify-content:space-between;align-items:center}
+.product-card__bottom strong,.menu-card strong{color:var(--wine);font-size:14px}
+.add-button{border:0;background:var(--wine);color:white;border-radius:20px;padding:9px 12px;font-size:9px;font-weight:700}
+.add-button i{margin-left:5px}
+.about__grid{display:grid;grid-template-columns:1fr 1fr;gap:85px;align-items:center}
+.about__image{height:430px;position:relative}
+.about__image img{height:100%;border-radius:18px 90px 18px 18px}
+.about__image-label{position:absolute;bottom:20px;left:20px;background:var(--cream-2);border-radius:30px;padding:11px 16px;font:600 12px "Fredoka",sans-serif}
+.about h2{font-size:clamp(35px,4vw,47px);max-width:470px}
+.about__content>p,.contact__content>p{font-size:12px;line-height:1.9;color:var(--muted);max-width:460px;margin:17px 0 25px}
+.values-list{display:grid;gap:17px;margin:25px 0}
+.value-item{display:flex;align-items:center;gap:13px}
+.value-item>span{width:39px;height:39px;display:grid;place-items:center;background:#f3dfc5;color:var(--wine);border-radius:12px;font-size:19px}
+.value-item h3{font:600 14px "Fredoka",sans-serif}
+.value-item p{font-size:10px;color:var(--muted);margin-top:3px}
+.text-link{color:var(--wine);font-size:11px;font-weight:800}
+.text-link i{margin-left:7px}
+.products{background:#f8ead5}
+.section-heading--row{display:flex;justify-content:space-between;align-items:end;text-align:left}
+.section-heading--row h2{margin-bottom:0}
+.section-heading--row>p{padding-bottom:5px}
+.products__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.menu-card{display:flex;align-items:center;gap:16px;padding:12px 15px;background:var(--cream-2);border:1px solid #efdfc9;border-radius:15px;min-width:0;transition:transform .25s}
+.menu-card:hover{transform:translateY(-3px)}
+.menu-card img{width:92px;height:92px;border-radius:12px;flex-shrink:0}
+.menu-card>div{flex:1;min-width:0}
+.menu-card h3{font-size:15px}
+.menu-card small{display:block;color:var(--muted);font-size:9px;margin:5px 0 9px}
+.round-add{border:0;width:32px;height:32px;flex-shrink:0;border-radius:50%;background:var(--wine);color:white;font-size:18px;transition:transform .2s}
+.round-add:hover{transform:rotate(90deg)}
+.menu-disclaimer{font-size:9px;color:#9c826e;text-align:center;margin-top:20px}
+.contact__grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:90px;align-items:center}
+.contact h2{font-size:clamp(42px,5vw,58px)}
+.contact-detail{display:flex;align-items:center;gap:13px;margin-top:22px}
+.contact-detail>i{width:40px;height:40px;border-radius:12px;background:#f3dfc5;color:var(--wine);display:grid;place-items:center;font-size:18px}
+.contact-detail small,.contact-detail a,.contact-detail span{display:block}
+.contact-detail small{font-size:9px;color:var(--muted);margin-bottom:4px}
+.contact-detail a,.contact-detail span{font-size:11px;font-weight:700}
+.contact-form{background:var(--cream-2);padding:30px;border-radius:20px;box-shadow:var(--shadow);display:grid;gap:9px}
+.contact-form label{font-size:10px;font-weight:700;margin-top:5px}
+.contact-form input,.contact-form textarea{width:100%;border:1px solid #edddc9;background:#fffdf8;border-radius:10px;padding:13px 14px;outline:none;color:var(--brown);font-size:11px;resize:vertical}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--wine)}
+.contact-form .button{justify-self:start;margin-top:7px}
+.form-status{font-size:9px;color:var(--muted);line-height:1.5}
+.footer{background:#5c142d;color:#f9ead7;padding:38px 0 20px}
+.footer__top{display:flex;align-items:center;justify-content:space-between;padding-bottom:30px}
+.footer .nav__logo i{color:#f1bd8d}
+.footer__top>p{font:500 15px/1.4 "Fredoka",sans-serif;color:#e8c9b1}
+.back-top{font-size:10px;font-weight:700}
+.back-top i{margin-left:7px}
+.footer__bottom{border-top:1px solid #ffffff25;padding-top:18px;display:flex;justify-content:space-between;color:#d5b4a8;font-size:9px}
+.footer__bottom i{color:#f0a1a8}
+.toast{position:fixed;right:24px;bottom:24px;z-index:100;background:var(--brown);color:white;border-radius:30px;padding:13px 19px;display:flex;align-items:center;gap:9px;font-size:11px;box-shadow:var(--shadow);opacity:0;transform:translateY(15px);pointer-events:none;transition:.3s}
+.toast.show{opacity:1;transform:translateY(0)}
+.toast i{color:#9ce0a2;font-size:17px}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:900px){
+ .nav__menu{gap:20px}.nav__list{gap:17px}.nav__link{font-size:11px}.nav__button{display:none}
+ .home__grid{gap:35px}.hero-photo{height:390px}.about__grid{gap:45px}.contact__grid{gap:45px}
+}
+@media(max-width:700px){
+ .container{width:min(100% - 36px,520px)}.section{padding:75px 0}
+ .nav{height:67px}.nav__toggle{display:grid;place-items:center;border:0;background:none;color:var(--brown);font-size:24px}
+ .nav__menu{position:fixed;top:0;right:-100%;width:min(82%,340px);height:100vh;background:var(--cream-2);padding:32px 28px;display:flex;flex-direction:column;align-items:flex-start;gap:32px;box-shadow:-15px 0 35px #3f21151a;transition:right .35s}
+ .nav__menu.show-menu{right:0}.mobile-brand{display:block;font:700 24px "Fredoka",sans-serif}.mobile-brand i{color:var(--wine)}
+ .nav__list{display:flex;flex-direction:column;align-items:flex-start;gap:25px}.nav__link{font-size:16px}
+ .nav__button{display:inline-flex}.nav__social{display:flex;gap:18px;color:var(--wine);font-size:20px}
+ .nav__close{display:block;position:absolute;top:25px;right:25px;border:0;background:none;font-size:24px;color:var(--brown)}
+ .home{padding-top:50px}.home__grid{grid-template-columns:1fr;gap:42px}.home h1{font-size:clamp(52px,13vw,70px)}
+ .home__visual{width:88%;margin:auto;padding:0 12px 15px 0}.hero-photo{height:350px}.hero-sticker{left:-20px;width:88px;height:88px;font-size:11px}
+ .floating-note{right:-20px;bottom:30px}.home__bottom{font-size:8px;padding-top:28px}
+ .featured__grid{grid-template-columns:1fr;max-width:390px}.product-card__image{height:220px}
+ .about__grid,.contact__grid{grid-template-columns:1fr;gap:35px}.about__image{height:340px;width:92%}.about__content{padding:0 3px}
+ .section-heading--row{display:block}.section-heading--row>p{margin-top:10px}
+ .products__grid{grid-template-columns:1fr}.menu-card img{width:78px;height:78px}
+ .contact-form{padding:23px}.footer__top{align-items:flex-start;gap:18px;flex-wrap:wrap}.footer__top>p{font-size:13px}.footer__bottom{gap:10px;flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}

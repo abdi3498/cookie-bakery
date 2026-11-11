@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Handcrafted cookies baked fresh every day. Discover classic and specialty flavors made with real ingredients.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fbefdc">
+  <title>Cookie — Made with love, baked for you</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="page-glow page-glow--one"></div>
+  <div class="page-glow page-glow--two"></div>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#home" class="nav__logo"><i class="ri-cookie-fill"></i><span>Cookie</span></a>
+      <div class="nav__menu" id="nav-menu">
+        <div class="mobile-brand"><i class="ri-cookie-fill"></i> Cookie</div>
+        <ul class="nav__list">
+          <li><a href="#home" class="nav__link active-link">Home</a></li>
+          <li><a href="#featured" class="nav__link">Featured</a></li>
+          <li><a href="#about" class="nav__link">About us</a></li>
+          <li><a href="#products" class="nav__link">Products</a></li>
+          <li><a href="#contact" class="nav__link">Contact us</a></li>
+        </ul>
+        <a href="#products" class="button nav__button">Order now <i class="ri-arrow-right-up-line"></i></a>
+        <div class="nav__social">
+          <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+          <a href="#" aria-label="Facebook"><i class="ri-facebook-circle-line"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="ri-whatsapp-line"></i></a>
+        </div>
+        <button class="nav__close" id="nav-close" aria-label="Close menu"><i class="ri-close-line"></i></button>
+      </div>
+      <div class="nav__actions">
+        <a href="#products" class="cart-link" aria-label="Shopping cart"><i class="ri-shopping-bag-3-line"></i><span class="cart-count" id="cart-count">0</span></a>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Open menu"><i class="ri-menu-4-line"></i></button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="home section" id="home">
+      <div class="container home__grid">
+        <div class="home__content reveal">
+          <span class="eyebrow"><i class="ri-star-fill"></i> 4.9/5 · Loved by cookie fans</span>
+          <h1>Made with <span>love,</span><br> baked for you.</h1>
+          <p class="home__description">Little moments deserve something sweet. Discover handcrafted cookies made with real ingredients and a whole lot of love.</p>
+          <div class="home__buttons">
+            <a href="#products" class="button">View menu <i class="ri-arrow-right-line"></i></a>
+            <a href="#contact" class="button button--outline">Contact us <i class="ri-chat-1-line"></i></a>
+          </div>
+          <div class="home__note"><div class="avatar-stack"><span>🍪</span><span>🤎</span><span>✨</span></div><p><strong>Freshly baked</strong><br>with happiness in every bite</p></div>
+        </div>
+        <div class="home__visual reveal">
+          <div class="hero-sticker"><i class="ri-heart-fill"></i><span>Baked<br>with love</span></div>
+          <div class="hero-photo">
+            <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=1100&q=90" alt="Freshly baked chocolate chip cookies">
+          </div>
+          <div class="floating-note"><span class="floating-note__icon">✦</span><div><strong>Fresh every day</strong><small>Goodness in every bite</small></div></div>
+        </div>
+      </div>
+      <div class="home__bottom container"><span>GOOD COOKIES. GOOD MOOD.</span><span>MADE FRESH DAILY <i class="ri-arrow-down-line"></i></span></div>
+    </section>
+
+    <section class="featured section" id="featured">
+      <div class="container">
+        <div class="section-heading reveal"><span class="section-kicker">MOST REQUESTED</span><h2>Fan favourites<span>.</span></h2><p>The cookies everyone keeps coming back for.</p></div>
+        <div class="featured__grid">
+          <article class="product-card reveal">
+            <div class="product-card__image"><span class="product-tag">Best seller</span><img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=700&q=85" alt="Classic chocolate chip cookies"></div>
+            <div class="product-card__body"><h3>Classic chocolate</h3><p>Golden and crisp outside, soft in the middle, with generous chocolate chunks.</p><div class="product-card__bottom"><strong>$6.00</strong><button class="add-button" data-name="Classic chocolate" data-price="6">Add to cart <i class="ri-add-line"></i></button></div></div>
+          </article>
+          <article class="product-card reveal">
+            <div class="product-card__image"><span class="product-tag">Popular</span><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=700&q=85" alt="Double chocolate cookies"></div>
+            <div class="product-card__body"><h3>Double chocolate</h3><p>A rich, intense cocoa dough packed with chocolate in every bite.</p><div class="product-card__bottom"><strong>$6.50</strong><button class="add-button" data-name="Double chocolate" data-price="6.5">Add to cart <i class="ri-add-line"></i></button></div></div>
+          </article>
+          <article class="product-card reveal">
+            <div class="product-card__image"><span class="product-tag">Favourite</span><img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=700&q=85" alt="Red velvet cookies"></div>
+            <div class="product-card__body"><h3>Red velvet</h3><p>Smooth, velvety and rich, with a little chocolate surprise in the centre.</p><div class="product-card__bottom"><strong>$6.50</strong><button class="add-button" data-name="Red velvet" data-price="6.5">Add to cart <i class="ri-add-line"></i></button></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="container about__grid">
+        <div class="about__image reveal"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1000&q=85" alt="Baker preparing fresh dough in a bakery"><span class="about__image-label">A little joy, freshly baked</span></div>
+        <div class="about__content reveal"><span class="section-kicker">OUR STORY</span><h2>We've been baking with love since <span>2024.</span></h2><p>Cookie was born from a simple idea: make the kind of cookies that feel like a warm hug. Every morning, we mix, bake and share small batches of delicious happiness.</p>
+          <div class="values-list">
+            <div class="value-item"><span><i class="ri-leaf-line"></i></span><div><h3>Real ingredients</h3><p>No artificial preservatives or shortcuts.</p></div></div>
+            <div class="value-item"><span><i class="ri-heart-3-line"></i></span><div><h3>Handmade with care</h3><p>Every cookie is shaped and baked in small batches.</p></div></div>
+            <div class="value-item"><span><i class="ri-sun-line"></i></span><div><h3>Fresh every day</h3><p>Made fresh so every bite tastes special.</p></div></div>
+          </div>
+          <a href="#contact" class="text-link">Get to know us <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="products section" id="products">
+      <div class="container">
+        <div class="section-heading section-heading--row reveal"><div><span class="section-kicker">BAKED FOR YOUR CRAVINGS</span><h2>Our cookies<span>.</span></h2></div><p>Find your new favourite.<br>There is a treat for every mood.</p></div>
+        <div class="products__grid">
+          <article class="menu-card reveal"><img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=600&q=80" alt="Classic chocolate chip cookie"><div><h3>Classic chocolate</h3><small>Chocolate chunks · Soft centre</small><strong>$6.00</strong></div><button class="round-add" data-name="Classic chocolate" data-price="6" aria-label="Add classic chocolate"><i class="ri-add-line"></i></button></article>
+          <article class="menu-card reveal"><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80" alt="Double chocolate cookie"><div><h3>Double chocolate</h3><small>Rich cocoa · Extra chocolate</small><strong>$6.50</strong></div><button class="round-add" data-name="Double chocolate" data-price="6.5" aria-label="Add double chocolate"><i class="ri-add-line"></i></button></article>
+          <article class="menu-card reveal"><img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80" alt="Red velvet cookie"><div><h3>Red velvet</h3><small>Velvety cocoa · Sweet centre</small><strong>$6.50</strong></div><button class="round-add" data-name="Red velvet" data-price="6.5" aria-label="Add red velvet"><i class="ri-add-line"></i></button></article>
+          <article class="menu-card reveal"><img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80" alt="Peanut butter cookie"><div><h3>Peanut butter</h3><small>Roasted peanuts · Buttery</small><strong>$6.00</strong></div><button class="round-add" data-name="Peanut butter" data-price="6" aria-label="Add peanut butter"><i class="ri-add-line"></i></button></article>
+          <article class="menu-card reveal"><img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=600&q=80" alt="Oatmeal cookie"><div><h3>Oatmeal crunch</h3><small>Rolled oats · Brown sugar</small><strong>$5.50</strong></div><button class="round-add" data-name="Oatmeal crunch" data-price="5.5" aria-label="Add oatmeal crunch"><i class="ri-add-line"></i></button></article>
+          <article class="menu-card reveal"><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80" alt="White chocolate cookie"><div><h3>White chocolate</h3><small>Creamy white chips · Vanilla</small><strong>$7.00</strong></div><button class="round-add" data-name="White chocolate" data-price="7" aria-label="Add white chocolate"><i class="ri-add-line"></i></button></article>
+        </div>
+        <p class="menu-disclaimer">Prices and product descriptions are sample content. Update them to match your actual menu.</p>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="container contact__grid">
+        <div class="contact__content reveal"><span class="section-kicker">WE'D LOVE TO HEAR FROM YOU</span><h2>Let's make<br>something <span>sweet.</span></h2><p>Have a question, a special request or a cookie craving? Send us a message and we'll get back to you.</p>
+          <div class="contact-detail"><i class="ri-mail-line"></i><div><small>Email us</small><a href="mailto:hello@cookiebakery.com">abdim@3498@gmail.com</a></div></div>
+          <div class="contact-detail"><i class="ri-time-line"></i><div><small>Bakery hours</small><span>Monday – Saturday · 8 AM – 6 PM</span></div></div>
+        </div>
+        <form class="contact-form reveal" id="contact-form">
+          <label for="name">Your name</label><input id="name" name="name" type="text" placeholder="e.g. Alex" required>
+          <label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com" required>
+          <label for="message">Your message</label><textarea id="message" name="message" rows="4" placeholder="Tell us what you're craving..." required></textarea>
+          <button class="button" type="submit">Send message <i class="ri-arrow-right-line"></i></button>
+          <p class="form-status" id="form-status" role="status">This demo form opens your email app when submitted.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__top"><a href="#home" class="nav__logo"><i class="ri-cookie-fill"></i><span>Cookie</span></a><p>A little sweetness makes<br>every day better.</p><a href="#home" class="back-top">Back to top <i class="ri-arrow-up-line"></i></a></div>
+    <div class="container footer__bottom"><span>© <span id="year"></span> Cookie Bakery. All rights reserved.</span><span>Made with <i class="ri-heart-fill"></i> and chocolate chips.</span></div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"><i class="ri-check-line"></i><span>Added to your bag</span></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
